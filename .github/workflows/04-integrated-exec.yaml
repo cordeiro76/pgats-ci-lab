@@ -1,0 +1,31 @@
+# CI de níve  04 - Disparo dos testes dentro do pipe de dev
+
+name: 'Execução Integrada'
+
+on:
+  workflow_dispatch:
+
+jobs:
+  inpecao:
+    runs-on: ubuntu-tatest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instalando Yarn
+        run: npm install -g yarn
+
+      - name: Instalando Dependencias
+        run: yarn
+      
+      - name: Checando padronizaçao do código
+        run: yarn lint
+
+  unidade:
+    runs-on: ubuntu-tatest
+
+  e2e-tests:
+    runs-on: ubuntu-tatest
+
+  deploy:
+    runs-on: ubuntu-tatest
