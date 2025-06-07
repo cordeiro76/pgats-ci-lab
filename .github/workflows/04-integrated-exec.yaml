@@ -17,13 +17,13 @@ jobs:
 
       - name: Instalando Dependencias
         run: yarn
-      
+
       - name: Checando padronizaçao do código
         run: yarn lint
 
   unidade:
     runs-on: ubuntu-tatest
-  
+
     steps:
       - uses: actions/checkout@v4
 
@@ -32,7 +32,7 @@ jobs:
 
       - name: Instalando Dependencias
         run: yarn
-      
+
       - name: Checando padronizaçao do código
         run: yarn test
 
