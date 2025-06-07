@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  inpecao:
+  inspecao:
     runs-on: ubuntu-latest
 
     steps:
